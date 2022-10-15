@@ -34,7 +34,7 @@ function calcTotals(){
 function changeLogoURL(){
 console.log("love ya!");
 
-    let newLogoURL = prompt("Enter your logoURL", "Harry Potter");
+    let newLogoURL = prompt("Enter your logoURL", "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
     let text;
     if (newLogoURL == null || newLogoURL == "") {
       text = "User cancelled the prompt.";
