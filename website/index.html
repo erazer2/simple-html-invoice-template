@@ -18,13 +18,13 @@
 						<table>
 							<tr>
 								<td class="title">
-									<img id="invoiceLogo" onclick="changeLogoURL();" src="logo.png" style="width: 100%; max-width: 300px" />
+									<img id="invoiceLogo" onclick="changeLogoURL();" src="logo.png" style="cursor: pointer;width: 100%; max-width: 300px" />
 								</td>
 
 								<td>
-									Invoice #: <input class="hiddenInputBoxes" value="123"><br />
-									Created: <input class="hiddenInputBoxes" value="January 1, 2015"><br />
-									Due: <input class="hiddenInputBoxes" value="February 1, 2015">
+									Invoice #: <input class="hiddenInputBoxes" id="invoiceNumber" value="123"><br />
+									Created: <input class="hiddenInputBoxes" id="invoiceDate"  value="January 1, 2015"><br />
+									Due: <input class="hiddenInputBoxes" id="invoiceDueDate" value="February 1, 2015">
 								</td>
 							</tr>
 						</table>
@@ -36,9 +36,9 @@
 						<table>
 							<tr>
 								<td>
-									<input class="hiddenInputBoxes" value="Erazer Triplet"><br />
-									<input class="hiddenInputBoxes" value="Accacia Avenue"><br />
-                                    <input class="hiddenInputBoxes" value="BananaMan">
+									<input class="hiddenInputBoxes" id="companyName" value="Erazer Triplet"><br />
+									<input class="hiddenInputBoxes" id="companyStreet" value="Accacia Avenue"><br />
+                                    <input class="hiddenInputBoxes" id="companyCityAndPostCode" value="BananaMan">
 								</td>
 
 								<td>
@@ -110,6 +110,8 @@
 
     <script>
         calcTotals();
+		populateInvoice();
+
 document.getElementById("Item1").addEventListener("keyup",calcTotals);
 document.getElementById("Item2").addEventListener("keyup",calcTotals);
 document.getElementById("Item3").addEventListener("keyup",calcTotals);
