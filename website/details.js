@@ -30,3 +30,17 @@ function calcTotals(){
     document.getElementById("totalIncVat").value=totalSofar*vatRate+parseFloat(totalSofar);
 
 }
+
+function changeLogoURL(){
+console.log("love ya!");
+
+    let newLogoURL = prompt("Enter your logoURL", "Harry Potter");
+    let text;
+    if (newLogoURL == null || newLogoURL == "") {
+      text = "User cancelled the prompt.";
+    } else {
+     document.getElementById("invoiceLogo").src=newLogoURL;
+
+    }
+
+}
